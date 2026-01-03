@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QAMI DESIGN | Digital Products</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #111;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #eee;
+    }
+    header h1 { font-size: 20px; letter-spacing: 2px; }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+    }
+    .hero {
+      padding: 80px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero h2 { font-size: 48px; margin: 0; }
+    .hero p { font-size: 18px; color: #444; }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 28px;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+    }
+    .products {
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      border: 1px solid #eee;
+      padding: 25px;
+      transition: transform 0.2s ease;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { margin-top: 0; }
+    .price { font-weight: bold; margin: 15px 0; }
+    footer {
+      padding: 40px;
+      text-align: center;
+      border-top: 1px solid #eee;
+      font-size: 14px;
+    }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero h2 { font-size: 36px; }
+    }
+  </style>
+</head>
+<body><header>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <img src="logo.png" alt="QAMI DESIGN Logo" style="height:40px;" />
+    <h1>QAMI DESIGN</h1>
+  </div>
+  <nav>
+    <a href="#">New</a>
+    <a href="#">Products</a>
+    <a href="#">Contact</a>
+  </nav>
+</header><section class="hero">
+  <div>
+    <h2>Designs Built by a Student. Used by Everyone.</h2>
+    <p>Minimal, modern digital products for creators, students, and small businesses.</p>
+    <a class="btn" href="#products">Shop Now</a>
+  </div>
+  <div>
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" style="width:100%; border-radius:10px;" />
+  </div>
+</section><section id="products" class="products">
+  <div class="card">
+    <h3>Instagram Post Pack</h3>
+    <p>10 clean Instagram designs. Fully editable.</p>
+    <div class="price">Rs 500</div>
+    <a class="btn" href="mailto:mehernazirahmad@gmail.com">Buy via Email 📨</a>
+  </div>
+  <div class="card">
+    <h3>Business Card</h3>
+    <p>Professional, print-ready design.</p>
+    <div class="price">Rs 400</div>
+    <a class="btn" href="mailto:mehernazirahmad@gmail.com">Buy via Email 📨</a>
+  </div>
+  <div class="card">
+    <h3>Resume Template</h3>
+    <p>Modern resume template for students.</p>
+    <div class="price">Rs 300</div>
+    <a class="btn" href="mailto:mehernazirahmad@gmail.com">Buy via Email 📨</a>
+  </div>
+</section><footer>
+  <p>© 2026 QAMI DESIGN — A Class 8 SaaS Project | Contact: <a href="mailto:mehernazirahmad@gmail.com">mehernazirahmad@gmail.com</a></p>
+</footer></body>
+</html>
