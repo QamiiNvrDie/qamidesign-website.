@@ -1,303 +1,20 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QAMI DESIGN | Digital Products</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Helvetica, Arial, sans-serif;
-      background: #ffffff;
-      color: #111;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      border-bottom: 1px solid #eee;
-    }
-    header h1 { font-size: 20px; letter-spacing: 2px; }
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #111;
-      font-weight: 600;
-    }
-    .hero {
-      padding: 80px 40px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-    .hero h2 { font-size: 48px; margin: 0; }
-    .hero p { font-size: 18px; color: #444; }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 28px;
-      background: #111;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 30px;
-    }
-    .products {
-      padding: 60px 40px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-    .card {
-      border: 1px solid #eee;
-      padding: 25px;
-      transition: transform 0.2s ease;
-    }
-    .card:hover { transform: translateY(-5px); }
-    .card h3 { margin-top: 0; }
-    .price { font-weight: bold; margin: 15px 0; }
-    footer {
-      padding: 40px;
-      text-align: center;
-      border-top: 1px solid #eee;
-      font-size: 14px;
-    }
-    @media (max-width: 768px) {
-      .hero { grid-template-columns: 1fr; }
-      .hero h2 { font-size: 36px; }
-    }
-  </style>
-</head>
-<body><header>
-  <div style="display:flex;align-items:center;gap:12px;">
-    <img src="logo.png" alt="QAMI DESIGN Logo" style="height:40px;" />
-    <h1>QAMI DESIGN</h1>
-  </div>
-  <nav>
-    <a href="#">New</a>
-    <a href="#">Products</a>
-    <a href="#">Contact</a>
-  </nav>
-</header><section class="hero">
-  <div>
-    <h2>Designs Built by a Student. Used by Everyone.</h2>
-    <p>Minimal, modern digital products for creators, students, and small businesses.</p>
-    <a class="btn" href="#products">Shop Now</a>
-  </div>
-  <div>
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" style="width:100%; border-radius:10px;" />
-  </div>
-</section><section id="products" class="products">
-  <div class="card">
-    <h3>Instagram Post Pack</h3>
-    <p>10 clean Instagram designs. Fully editable.</p>
-    <div class="price">Rs 500</div>
-    <a class="btn" href="mailto:mehernazirahmad@gmail.com">Buy via Email 📨</a>
-  </div>
-  <div class="card">
-    <h3>Business Card</h3>
-    <p>Professional, print-ready design.</p>
-    <div class="price">Rs 400</div>
-    <a class="btn" href="mailto:mehernazirahmad@gmail.com">Buy via Email 📨</a>
-  </div>
-  <div class="card">
-    <h3>Resume Template</h3>
-    <p>Modern resume template for students.</p>
-    <div class="price">Rs 300</div>
-    <a class="btn" href="mailto:mehernazirahmad@gmail.com">Buy via Email 📨</a>
-  </div>
-</section><footer>
-  <p>© 2026 QAMI DESIGN — A Class 8 SaaS Project | Contact: <a href="mailto:mehernazirahmad@gmail.com">mehernazirahmad@gmail.com</a></p>
-</footer></body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>QAMI DESIGN — Digital Store</title>
-
-<style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#0d0d0d;
-  color:#fff;
-}
-
-/* HEADER */
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 40px;
-  background:#000;
-  position:sticky;
-  top:0;
-  z-index:10;
-}
-header img{height:40px}
-.cart{
-  cursor:pointer;
-  font-size:18px;
-}
-
-/* HERO */
-.hero{
-  text-align:center;
-  padding:70px 20px;
-  animation:fadeUp 1s ease;
-}
-.hero h1{font-size:42px}
-.hero p{color:#aaa}
-
-/* PRODUCTS */
-.products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-  padding:40px;
-}
-.product{
-  background:#1a1a1a;
-  padding:20px;
-  border-radius:18px;
-  text-align:center;
-  transition:0.4s ease;
-}
-.product:hover{
-  transform:translateY(-12px);
-  box-shadow:0 25px 50px rgba(0,0,0,0.6);
-}
-.product img{
-  width:100%;
-  border-radius:12px;
-}
-.price{
-  color:#00ffcc;
-  font-size:20px;
-  margin:10px 0;
-}
-button{
-  padding:12px 22px;
-  border:none;
-  border-radius:25px;
-  background:#00ffcc;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-/* CART */
-#cartBox{
-  display:none;
-  padding:40px;
-  background:#111;
-}
-#cartBox ul{
-  list-style:none;
-  padding:0;
-}
-#cartBox li{
-  margin:8px 0;
-}
-
-/* ANIMATION */
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(30px)}
-  to{opacity:1;transform:translateY(0)}
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <img src="logo.png" alt="QAMI DESIGN">
-  <div class="cart">🛒 Cart (<span id="count">0</span>)</div>
-</header>
-
-<section class="hero">
-  <h1>QAMI DESIGN</h1>
-  <p>Premium Digital Products — Delivered via Email 📨</p>
-</section>
-
-<section class="products">
-
-  <div class="product">
-    <img src="https://via.placeholder.com/300x200">
-    <h3>Logo Design Pack</h3>
-    <div class="price">$5</div>
-    <button onclick="add('Logo Design Pack',5)">Add to Cart</button>
-  </div>
-
-  <div class="product">
-    <img src="https://via.placeholder.com/300x200">
-    <h3>Social Media Templates</h3>
-    <div class="price">$7</div>
-    <button onclick="add('Social Media Templates',7)">Add to Cart</button>
-  </div>
-
-  <div class="product">
-    <img src="https://via.placeholder.com/300x200">
-    <h3>Business Card Designs</h3>
-    <div class="price">$4</div>
-    <button onclick="add('Business Card Designs',4)">Add to Cart</button>
-  </div>
-
-</section>
-
-<section id="cartBox">
-  <h2>Your Cart</h2>
-  <ul id="items"></ul>
-  <p id="total"></p>
-  <a id="emailBtn">Checkout via Email 📨</a>
-</section>
-
-<script>
-let cart=[];
-let total=0;
-
-function add(name,price){
-  cart.push({name,price});
-  total+=price;
-
-  document.getElementById("count").innerText=cart.length;
-  document.getElementById("cartBox").style.display="block";
-
-  render();
-}
-
-function render(){
-  let list=document.getElementById("items");
-  list.innerHTML="";
-  cart.forEach(i=>{
-    let li=document.createElement("li");
-    li.innerText=`${i.name} - $${i.price}`;
-    list.appendChild(li);
-  });
-  document.getElementById("total").innerText="Total: $"+total;
-
-  document.getElementById("emailBtn").href=
-  `mailto:mehernazirahmad@gmail.com?subject=Order from QAMI DESIGN&body=Products:%0A${cart.map(i=>i.name).join(", ")}%0ATotal: $${total}`;
-}
-</script>
-
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>QAMI DESIGN</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* BASE */
 body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#fff;
+  font-family: Helvetica, Arial, sans-serif;
+  background:#ffffff;
   color:#000;
+  overflow-x:hidden;
 }
 
 /* HEADER */
@@ -305,99 +22,360 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:20px 50px;
+  padding:25px 60px;
 }
-header img{height:40px}
+header img{
+  height:42px;
+}
+header a{
+  text-decoration:none;
+  font-weight:600;
+  color:#000;
+}
 
 /* HERO */
 .hero{
-  padding:80px 50px;
+  padding:110px 60px 80px;
 }
 .hero h1{
-  font-size:60px;
+  font-size:72px;
   line-height:1;
+  letter-spacing:-2px;
 }
 .hero p{
-  max-width:400px;
+  margin-top:25px;
+  max-width:420px;
   font-size:18px;
+  color:#444;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QAMI DESIGN</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* BASE */
+body{
+  font-family: Helvetica, Arial, sans-serif;
+  background:#fff;
+  color:#000;
+  overflow-x:hidden;
 }
 
-/* PRODUCTS */
-.products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:40px;
-  padding:50px;
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 60px;
 }
-.card{
+header img{
+  height:42px;
+}
+header a{
+  text-decoration:none;
+  font-weight:600;
+  color:#000;
+}
+
+/* HERO */
+.hero{
+  padding:110px 60px 80px;
+}
+.hero h1{
+  font-size:72px;
+  line-height:1;
+  letter-spacing:-2px;
+}
+.hero p{
+  margin-top:25px;
+  max-width:420px;
+  font-size:18px;
+  color:#444;
+}
+
+/* SHOWCASE GRID */
+.showcase{
+  padding:60px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:50px;
+}
+
+/* DESIGN CARD */
+.design{
   cursor:pointer;
 }
-.card img{
+.design img{
   width:100%;
-  border-radius:12px;
-  transition:0.4s;
+  border-radius:16px;
+  transition:transform .6s ease, box-shadow .6s ease;
 }
-.card:hover img{
+.design:hover img{
   transform:scale(1.05);
+  box-shadow:0 30px 60px rgba(0,0,0,.15);
 }
-.card h3{
-  margin:15px 0 5px;
+.design h3{
+  margin-top:18px;
+  font-size:18px;
 }
-.card span{
-  color:#555;
+.design span{
+  font-size:14px;
+  color:#666;
 }
 
 /* FOOTER */
 footer{
-  padding:40px 50px;
-  background:#f5f5f5;
+  padding:60px;
+  background:#f4f4f4;
+  margin-top:80px;
+  font-size:14px;
 }
-a{
+footer a{
   color:#000;
-  font-weight:bold;
+  font-weight:600;
   text-decoration:none;
+}
+
+/* SMOOTH APPEAR */
+.fade{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s ease;
+}
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  header, .hero, .showcase, footer{
+    padding:30px;
+  }
+  .hero h1{
+    font-size:46px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-  <img src="logo.png">
+  <img src="logo.png" alt="QAMI DESIGN">
   <a href="mailto:mehernazirahmad@gmail.com">Contact</a>
 </header>
 
-<section class="hero">
-  <h1>DESIGN<br>WITHOUT<br>LIMITS</h1>
-  <p>Premium logo & brand design concepts crafted for modern creators.</p>
+<!-- HERO -->
+<section class="hero fade">
+  <h1>MY<br>DESIGN<br>WORK</h1>
+  <p>
+    A curated showcase of my original design work.
+    Each design is created by me at QAMI DESIGN.
+  </p>
 </section>
 
-<section class="products">
+<!-- SHOWCASE -->
+<section class="showcase">
 
-  <div class="card">
-    <img src="https://via.placeholder.com/400x300">
-    <h3>Minimal Logo Collection</h3>
-    <span>Brand Identity</span>
+  <!-- DESIGN 1 -->
+  <div class="design fade">
+    <img src="newyear.png" alt="New Year Greeting Design">
+    <h3>New Year Greeting Design</h3>
+    <span>Social Media Creative</span>
   </div>
 
-  <div class="card">
-    <img src="https://via.placeholder.com/400x300">
-    <h3>Social Media Templates</h3>
-    <span>Instagram / Facebook</span>
+  <!-- DESIGN 2 -->
+  <div class="design fade">
+    <img src="happybirthday.png" alt="Birthday Post Design">
+    <h3>Birthday Greeting Design</h3>
+    <span>Social Media Creative</span>
   </div>
 
-  <div class="card">
-    <img src="https://via.placeholder.com/400x300">
-    <h3>Business Card Designs</h3>
-    <span>Print Ready</span>
+  <!-- DESIGN 3 -->
+  <div class="design fade">
+    <img src="weddingfloral.png" alt="Muslim Wedding Invitation">
+    <h3>Muslim Wedding Invitation</h3>
+    <span>Invitation Design</span>
   </div>
 
 </section>
 
-<footer>
+<!-- FOOTER -->
+<footer class="fade">
   <p>© 2026 QAMI DESIGN</p>
-  <p>Request designs via <a href="mailto:mehernazirahmad@gmail.com">Email</a></p>
+  <p>
+    For custom design requests, contact via 
+    <a href="mailto:mehernazirahmad@gmail.com">Email</a>
+  </p>
 </footer>
+
+<script>
+/* SMOOTH SCROLL ANIMATION */
+const items=document.querySelectorAll('.fade');
+const show=()=>{
+  items.forEach(el=>{
+    const top=el.getBoundingClientRect().top;
+    if(top<window.innerHeight-100){
+      el.classList.add('show');
+    }
+  });
+}
+window.addEventListener('scroll',show);
+show();
+</script>
+
+</body>
+</html>
+}
+
+/* SHOWCASE GRID */
+.showcase{
+  padding:60px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:50px;
+}
+
+/* DESIGN CARD */
+.design{
+  cursor:pointer;
+}
+.design img{
+  width:100%;
+  border-radius:16px;
+  transition:transform .6s ease, box-shadow .6s ease;
+}
+.design:hover img{
+  transform:scale(1.05);
+  box-shadow:0 30px 60px rgba(0,0,0,.15);
+}
+.design h3{
+  margin-top:18px;
+  font-size:18px;
+}
+.design span{
+  font-size:14px;
+  color:#666;
+}
+
+/* FOOTER */
+footer{
+  padding:60px;
+  background:#f4f4f4;
+  margin-top:80px;
+}
+footer p{
+  font-size:14px;
+  color:#333;
+}
+footer a{
+  color:#000;
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* SMOOTH APPEAR */
+.fade{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s ease;
+}
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  header, .hero, .showcase, footer{
+    padding:30px;
+  }
+  .hero h1{
+    font-size:46px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="logo.png" alt="QAMI DESIGN">
+  <a href="mailto:mehernazirahmad@gmail.com">Contact</a>
+</header>
+
+<!-- HERO -->
+<section class="hero fade">
+  <h1>DESIGN<br>BY<br>QAMI</h1>
+  <p>
+    A personal showcase of my original design work.
+    Every design you see here is created by me.
+  </p>
+</section>
+
+<!-- SHOWCASE -->
+<section class="showcase">
+
+  <!-- DESIGN 1 -->
+  <div class="design fade">
+    <img src="design1.jpg" alt="Design">
+    <h3>Brand Identity Concept</h3>
+    <span>Original Work</span>
+  </div>
+
+  <!-- DESIGN 2 -->
+  <div class="design fade">
+    <img src="design2.jpg" alt="Design">
+    <h3>Logo Exploration</h3>
+    <span>Personal Project</span>
+  </div>
+
+  <!-- DESIGN 3 -->
+  <div class="design fade">
+    <img src="design3.jpg" alt="Design">
+    <h3>Poster / Visual Design</h3>
+    <span>Creative Work</span>
+  </div>
+
+  <!-- DESIGN 4 -->
+  <div class="design fade">
+    <img src="design4.jpg" alt="Design">
+    <h3>Social Media Visual</h3>
+    <span>Original Concept</span>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="fade">
+  <p>© 2026 QAMI DESIGN</p>
+  <p>
+    For collaborations or custom design work:
+    <a href="mailto:mehernazirahmad@gmail.com">Email Me</a>
+  </p>
+</footer>
+
+<script>
+/* SMOOTH SCROLL ANIMATION */
+const items=document.querySelectorAll('.fade');
+const show=()=>{
+  items.forEach(el=>{
+    const top=el.getBoundingClientRect().top;
+    if(top<window.innerHeight-100){
+      el.classList.add('show');
+    }
+  });
+}
+window.addEventListener('scroll',show);
+show();
+</script>
 
 </body>
 </html>
