@@ -112,3 +112,177 @@
   <p>© 2026 QAMI DESIGN — A Class 8 SaaS Project | Contact: <a href="mailto:mehernazirahmad@gmail.com">mehernazirahmad@gmail.com</a></p>
 </footer></body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QAMI DESIGN — Digital Store</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#0d0d0d;
+  color:#fff;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  background:#000;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+header img{height:40px}
+.cart{
+  cursor:pointer;
+  font-size:18px;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:70px 20px;
+  animation:fadeUp 1s ease;
+}
+.hero h1{font-size:42px}
+.hero p{color:#aaa}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  padding:40px;
+}
+.product{
+  background:#1a1a1a;
+  padding:20px;
+  border-radius:18px;
+  text-align:center;
+  transition:0.4s ease;
+}
+.product:hover{
+  transform:translateY(-12px);
+  box-shadow:0 25px 50px rgba(0,0,0,0.6);
+}
+.product img{
+  width:100%;
+  border-radius:12px;
+}
+.price{
+  color:#00ffcc;
+  font-size:20px;
+  margin:10px 0;
+}
+button{
+  padding:12px 22px;
+  border:none;
+  border-radius:25px;
+  background:#00ffcc;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* CART */
+#cartBox{
+  display:none;
+  padding:40px;
+  background:#111;
+}
+#cartBox ul{
+  list-style:none;
+  padding:0;
+}
+#cartBox li{
+  margin:8px 0;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="QAMI DESIGN">
+  <div class="cart">🛒 Cart (<span id="count">0</span>)</div>
+</header>
+
+<section class="hero">
+  <h1>QAMI DESIGN</h1>
+  <p>Premium Digital Products — Delivered via Email 📨</p>
+</section>
+
+<section class="products">
+
+  <div class="product">
+    <img src="https://via.placeholder.com/300x200">
+    <h3>Logo Design Pack</h3>
+    <div class="price">$5</div>
+    <button onclick="add('Logo Design Pack',5)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://via.placeholder.com/300x200">
+    <h3>Social Media Templates</h3>
+    <div class="price">$7</div>
+    <button onclick="add('Social Media Templates',7)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://via.placeholder.com/300x200">
+    <h3>Business Card Designs</h3>
+    <div class="price">$4</div>
+    <button onclick="add('Business Card Designs',4)">Add to Cart</button>
+  </div>
+
+</section>
+
+<section id="cartBox">
+  <h2>Your Cart</h2>
+  <ul id="items"></ul>
+  <p id="total"></p>
+  <a id="emailBtn">Checkout via Email 📨</a>
+</section>
+
+<script>
+let cart=[];
+let total=0;
+
+function add(name,price){
+  cart.push({name,price});
+  total+=price;
+
+  document.getElementById("count").innerText=cart.length;
+  document.getElementById("cartBox").style.display="block";
+
+  render();
+}
+
+function render(){
+  let list=document.getElementById("items");
+  list.innerHTML="";
+  cart.forEach(i=>{
+    let li=document.createElement("li");
+    li.innerText=`${i.name} - $${i.price}`;
+    list.appendChild(li);
+  });
+  document.getElementById("total").innerText="Total: $"+total;
+
+  document.getElementById("emailBtn").href=
+  `mailto:mehernazirahmad@gmail.com?subject=Order from QAMI DESIGN&body=Products:%0A${cart.map(i=>i.name).join(", ")}%0ATotal: $${total}`;
+}
+</script>
+
+</body>
+</html>
