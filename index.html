@@ -286,3 +286,118 @@ function render(){
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QAMI DESIGN</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#fff;
+  color:#000;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+}
+header img{height:40px}
+
+/* HERO */
+.hero{
+  padding:80px 50px;
+}
+.hero h1{
+  font-size:60px;
+  line-height:1;
+}
+.hero p{
+  max-width:400px;
+  font-size:18px;
+}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:40px;
+  padding:50px;
+}
+.card{
+  cursor:pointer;
+}
+.card img{
+  width:100%;
+  border-radius:12px;
+  transition:0.4s;
+}
+.card:hover img{
+  transform:scale(1.05);
+}
+.card h3{
+  margin:15px 0 5px;
+}
+.card span{
+  color:#555;
+}
+
+/* FOOTER */
+footer{
+  padding:40px 50px;
+  background:#f5f5f5;
+}
+a{
+  color:#000;
+  font-weight:bold;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png">
+  <a href="mailto:mehernazirahmad@gmail.com">Contact</a>
+</header>
+
+<section class="hero">
+  <h1>DESIGN<br>WITHOUT<br>LIMITS</h1>
+  <p>Premium logo & brand design concepts crafted for modern creators.</p>
+</section>
+
+<section class="products">
+
+  <div class="card">
+    <img src="https://via.placeholder.com/400x300">
+    <h3>Minimal Logo Collection</h3>
+    <span>Brand Identity</span>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/400x300">
+    <h3>Social Media Templates</h3>
+    <span>Instagram / Facebook</span>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/400x300">
+    <h3>Business Card Designs</h3>
+    <span>Print Ready</span>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 QAMI DESIGN</p>
+  <p>Request designs via <a href="mailto:mehernazirahmad@gmail.com">Email</a></p>
+</footer>
+
+</body>
+</html>
